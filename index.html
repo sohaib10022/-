@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Submit</title>
+  <link rel="stylesheet" href="css.css">
+	<style>
+	</style>
+</head>
+<body>
+	<div class="content">
+        <center>
+        <form method="post" action="" name="product" id="product">
+            <h1>Submit Product</h1>
+            <p style="font-size: 10px;">Mohammad Rameez Imdad</p>
+            
+            <label for="naem">تاريخ التحميل"</label>
+            <input class="fil" type="date" name="name" placeholder="تاريخ التحميل" required>
+
+            <label for="naem">الخط الملاحى</label>
+            <input class="fil" type="text" name="price" placeholder="الخط الملاحى" required>
+
+            <label for="naem">ارقام الحاويات"</label>
+            <input class="fil" type="text" name="Product Link" placeholder="ارقام الحاويات" required>
+
+            <label for="naem">الموكونات"</label>
+            <input class="fil" type="text" name="Product code" placeholder="الموكونات">
+
+            <label for="naem">Email*</label>
+            <input class="fil" type="text" name="email" placeholder="Enter Upi or Paypal" required>
+
+            <label for="">Product Description*</label>
+            <textarea name="description" id="" cols="30" rows="10" placeholder="About Product" required></textarea>
+
+            <button class="click">Submit &#10132;</button>
+            
+            <p style="  font-size: 10px; color: rgb(33, 33, 33); margin: 6px;">Mohammad Rameez Imdad</p>
+
+        </form>
+        </center>
+      
+    </div>
+    <div class="a1">
+      <iframe src="https://docs.google.com/spreadsheets/d/1jcYhnEX9hBjr0yj27VIgBd38xrAigXfLwbxPa0TcWb8/edit#gid=0" frameborder="0"></iframe>
+    </div>
+    <script>
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbweaPmy8wKkwUMhaKvUJIFK5y0xUlTKmTxli_JVBfwQ/dev'
+        const form = document.forms['product']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thank you! your form is submitted successfully." ))
+            .then(() => {  window.location.reload(); })
+            .catch(error => console.error('Error!', error.message))
+        })
+	
+      </script>
+    <br>
+</body>
+</html>
