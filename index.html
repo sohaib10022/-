@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>Form Submit</title>
-  <link rel="stylesheet" href="css.css">
 	<style>
 	</style>
 </head>
@@ -13,20 +12,20 @@
             <h1>Submit Product</h1>
             <p style="font-size: 10px;">Mohammad Rameez Imdad</p>
             
-            <label for="naem">تاريخ التحميل"</label>
-            <input class="fil" type="date" name="name" placeholder="تاريخ التحميل" required>
+            <label for="naem">Name*</label>
+            <input class="fil" type="text" name="a1" placeholder="Enter Product Name" required>
 
-            <label for="naem">الخط الملاحى</label>
-            <input class="fil" type="text" name="price" placeholder="الخط الملاحى" required>
+            <label for="naem">Rate*</label>
+            <input class="fil" type="text" name="a2" placeholder="Enter Free Or Paid" required>
 
-            <label for="naem">ارقام الحاويات"</label>
-            <input class="fil" type="text" name="Product Link" placeholder="ارقام الحاويات" required>
+            <label for="naem">Product Link*</label>
+            <input class="fil" type="text" name="a3" placeholder="Product Downloading Link" required>
 
-            <label for="naem">الموكونات"</label>
-            <input class="fil" type="text" name="Product code" placeholder="الموكونات">
+            <label for="naem">Product code</label>
+            <input class="fil" type="text" name="a4" placeholder="Product code">
 
             <label for="naem">Email*</label>
-            <input class="fil" type="text" name="email" placeholder="Enter Upi or Paypal" required>
+            <input class="fil" type="text" name="a5" placeholder="Enter Upi or Paypal" required>
 
             <label for="">Product Description*</label>
             <textarea name="description" id="" cols="30" rows="10" placeholder="About Product" required></textarea>
@@ -39,12 +38,8 @@
         </center>
       
     </div>
-    <div class="a1">
-      <iframe src="https://docs.google.com/spreadsheets/d/1jcYhnEX9hBjr0yj27VIgBd38xrAigXfLwbxPa0TcWb8/edit#gid=0" frameborder="0"></iframe>
-    </div>
     <script>
-
-const scriptURL = 'https://script.google.com/macros/s/AKfycbweaPmy8wKkwUMhaKvUJIFK5y0xUlTKmTxli_JVBfwQ/dev'
+	const scriptURL = '/// PASTE YOUR SCRIPT ID HERE ////'
         const form = document.forms['product']
       
         form.addEventListener('submit', e => {
@@ -55,6 +50,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbweaPmy8wKkwUMhaKvUJI
             .catch(error => console.error('Error!', error.message))
         })
 	
+	    
       </script>
     <br>
 </body>
